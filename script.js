@@ -1,9 +1,7 @@
 /*FORM security*/
-
 /*https://webdesign.tutsplus.com/tutorials/quick-tip-add-a-formspree-form-to-your-static-sites--cms-23870*/
-const contactform =  document.getElementById('contactform');
+let contactform =  document.getElementById('contactform');
 contactform.setAttribute('action', '//formspree.io/' + 'domain4bitcoin' + '@' + 'gmail' + '.' + 'com');
-
 
 
 /*Open form on button click*/
