@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: url(./img/car-big_1920.jpg)no-repeat center fixed;
+  -webkit-background-size: cover;
+  /*-moz-background-size: cover;*/
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*CUSTOM FONT - Could be a subject to copyright law!!! */
+@font-face {
+  font-family: "FerroRosso";
+  src: url("/font/ferrari/FerroRosso.ttf");
+  font-weight: 500;
+}
+
+#sale { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "FerroRosso", Verdana, Tahoma;
+  font-size: 2em;
+  color: #333;
+}
+
+#sale:hover {
+  color: #344
+}
+
+/* If browser suport text grdient show this...*/
+#saleTitle, #domain {
+  background: -webkit-linear-gradient(#eee, rgb(43, 42, 42));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+#button {
+  margin: 0px 0px 10px 0px;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding:10px;
+  width: 115px;
+  height: 40px;
+  color: black;
+  border: solid 1px #ee0003;
+  font-family: "FerroRosso", Verdana, Tahoma;
+  background-color: #8bb7b3;
+  background-image: linear-gradient(to right, #8bb7b3, #0c1514);
+}
+
+#button:hover {
+  border: solid 1px #d0b50e;
+  background-color: #243533;
+  transition-duration: 600ms;
+  background-image: linear-gradient(#0c1514, #8bb7b3);
+}
+
+/*modal*/
+
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  position: absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal-content {
+  width: 450px;
+  height: 450px;
+  background-color: rgba(247, 243, 19, 0.63);
+  border-radius: 5px;
+  text-align: center;
+  padding:20px;
+  position: relative;
+}
+
+input, textarea {
+  display:block;
+  margin: 8px auto;
+  border-style: hidden;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+  width: 70%;
+  height: 10%;
+}
+
+input[type="submit"] {
+  width: 30%;
+  font-family: "FerroRosso", Verdana, Tahoma;
+  background-color:rgba(255, 0, 0, 0.733);
+}
+
+/*plus transformed to cross in form*/
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 40px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+
+/* -----MEDIA Queries---- */
+
+
+@media only screen and (min-width: 240px) 
+and (max-width: 319px) {
+  
+  html {
+    background:url(./img/car-reduced-3668796_640.jpg)
+    no-repeat center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .modal-content {
+    width: 300px;
+    height: 300px;
+  }
+  
+  input,textarea {
+    line-height: 0.2;
+    font-size: 0.5em;
+    padding:3px;
+    width: 70%;
+  }
+}
+
+/* iPhone 5 & 5S in portrait & landscape */
+@media only screen and (min-width: 320px) 
+and (max-width: 569px) {
+  
+  html {
+    background:url(./img/car-reduced-3668796_640.jpg)
+    no-repeat center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .modal-content {
+    width: 700px;
+    height: 420px;
+    margin: 50px 20px 10px 20px;
+  }
+  
+  input,textarea {
+    line-height: 0.5;
+    font-size: 0.5em;
+    padding:17px;
+    width: 87%;
+  }
+  
+  /* #ferrariLogo{
+   height: 64px;
+   width:40px;
+  } */
+  
+  #button {
+    height: 20px;
+    width: 40px;
+    margin: 10px 0px 15px 0px;
+    font-size: 0.6em;
+  }
+}
+
+/*Most of the Smartphones Mobiles (Portrait)*/
+
+@media only screen and (max-width: 648px){
+    
+  html {
+    background:url(./img/car-reduced-3668796_640.jpg)
+    no-repeat center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  #sale {
+  font-size: 1em;
+  }
+  
+  #button {
+    height: 40px;
+    width: 89px;
+    margin: 5px 0px 5px 0px;
+    font-size: 1.3em;
+  }
+  
+  /* #ferrariLogo{
+    height: 64px;
+    width:40px;
+   } */
+  
+  .modal-content {
+    width: 640px;
+    height: 410px;
+    margin: 5px 10px 5px 10px;
+  }
+  
+  input,textarea {
+    line-height: 0.8;
+    font-size: 1em;
+    padding:10px;
+    width: 87%;
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media only screen and (min-width: 481px) and (max-width: 846px){
+  
+  html {
+    background:url(./img/car-reduced-3668796_640.jpg)
+    no-repeat center fixed;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  #sale {
+    font-size: 1.1em;
+  }
+  
+  #button {
+    padding: 3px;
+    height: 28px;
+    width: 89px;
+    margin: 5px 0px 10px 0px;
+    font-size: 1em;
+  }
+  
+  .modal-content {
+    width: 640px;
+    height: 410px;
+    margin: 50px 20px 10px 20px;
+    padding:20px;
+  }
+  
+  #ferrariLogo{
+    height: 64px;
+    width:40px;
+   }
+  
+  input,textarea {
+    line-height: 1;
+    font-size: 1em;
+    padding:10px;
+    width: 87%;
+  }
+}
+
+
