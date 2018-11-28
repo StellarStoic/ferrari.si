@@ -98,8 +98,8 @@ input, textarea {
   border-style: hidden;
   border-radius: 5px;
   padding: 10px;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 1.2em;
+  font-family: serif, 'Times New Roman', Times;
+  font-size: 1em;
   width: 70%;
   height: 10%;
 }
